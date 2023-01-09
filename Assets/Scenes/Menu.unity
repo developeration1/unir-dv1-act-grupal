@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64022df1be087004883ab252a5b6fd38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barraVolumen: {fileID: 794637343}
 --- !u!114 &533690534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,7 +616,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -754,6 +755,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907808690}
   m_CullTransparentMesh: 1
+--- !u!1001 &919655110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397953, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123979883721397966, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
+      propertyPath: m_Name
+      value: SingletonMusica
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47eea40a554b27c4192e66a2cb9cde77, type: 3}
 --- !u!1 &995090869
 GameObject:
   m_ObjectHideFlags: 0
