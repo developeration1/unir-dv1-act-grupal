@@ -8,21 +8,17 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] Slider barraVolumen;
     public static float ValorSliderMusica;
-    // Start is called before the first frame update
-    void Start()
+
+    public void LoadScene(string scene)
     {
-        
+      SceneManager.LoadScene(scene);
     }
-    public void LoadScene(int x)
-    {
-      SceneManager.LoadScene(x);
-    }
-    
+
     public void QuitGame()
     {
           Application.Quit();
     }
-    // Update is called once per frame
+
     void Update()
     {
         ValorSliderMusica = barraVolumen.value;
