@@ -6,6 +6,8 @@ using UnityEngine;
 public class FruitManager : MonoBehaviour
 {
     [SerializeField] UiManager ReferenciaUI;
+    [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject miniUva;
     //numero que determina el numero de fruta
     public int FruitID = 0;
     //0 - Bomba
@@ -23,6 +25,7 @@ public class FruitManager : MonoBehaviour
         //No considero esto la manera mas eficiente, pero como estamos trabajando por escenas no queria hacer
         //una hard reference al UI object
         ReferenciaUI = GameObject.FindGameObjectWithTag("UI").GetComponent<UiManager>();
+
     }
 
     // Update is called once per frame
@@ -39,6 +42,8 @@ public class FruitManager : MonoBehaviour
         //Instanciar la particula de explocion aqui luego
 
         //
+        GameObject Explosion = Instantiate(explosionPrefab) as GameObject;
+        Explosion.transform.position = transform.position;
         ReferenciaUI.PerderVida();
         Destroy(this.gameObject);
     }
@@ -48,6 +53,8 @@ public class FruitManager : MonoBehaviour
         //Instanciar la particula de explocion aqui luego
 
         //
+        GameObject Explosion = Instantiate(explosionPrefab) as GameObject;
+        Explosion.transform.position = transform.position;
         ReferenciaUI.AddScore(x);
         Destroy(this.gameObject);
     }
@@ -65,9 +72,14 @@ public class FruitManager : MonoBehaviour
     public void CreateUvas()
     {
         //Instanciar las 3 miniuvas aqui
-
+        GameObject miniUva1 = Instantiate(miniUva) as GameObject;
+        miniUva1.transform.position = transform.position + new Vector3(0,0.5f,0);
+        GameObject miniUva2 = Instantiate(miniUva) as GameObject;
+        miniUva2.transform.position = transform.position + new Vector3(0.5f,0,0);
+        GameObject miniUva3 = Instantiate(miniUva) as GameObject;
+        miniUva3.transform.position = transform.position + new Vector3(-0.5f,0,0);
         //
-            FruitExplosion(100);
+        FruitExplosion(100);
     }
 
     public void OnMouseDown()

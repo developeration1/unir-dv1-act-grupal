@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReferenciaUI: {fileID: 0}
+  explosionPrefab: {fileID: 2872303266583455532, guid: 8640a5f965c75524cb13edd822df003f, type: 3}
+  miniUva: {fileID: 1240549073620886948, guid: 17cfd8663c5849b4893fc49164fe4438, type: 3}
   FruitID: 1
   FruitLife: 3
 --- !u!50 &3758398598707547697
