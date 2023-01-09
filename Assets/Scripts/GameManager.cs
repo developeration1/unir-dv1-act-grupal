@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] int scoreToNextLevel;
     [SerializeField] string nextLevelName;
-    [SerializeField] UiManager uiManager;
+    [SerializeField] public UiManager uiManager;
 
-    float score = 0;
+    int score = 0;
     public float Score => score;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,6 @@ public class GameManager : MonoBehaviour
     public void AddScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        uiManager.SetScore(scoreToAdd);
+        uiManager.SetScore(score);
     }
 }

@@ -52,8 +52,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null && hit.collider.CompareTag("Fruit"))
         {
-            gm.AddScore(100);
-            Destroy(hit.transform.gameObject);
+            hit.transform.gameObject.GetComponent<FruitManager>().ShotByPlayer();
         }
 
         if(nextShotShow < Time.realtimeSinceStartup)

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FruitManager : MonoBehaviour
 {
-    [SerializeField] UiManager ReferenciaUI;
+    [SerializeField] GameManager ReferenciaUI;
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] GameObject miniUva;
     //numero que determina el numero de fruta
@@ -24,7 +24,7 @@ public class FruitManager : MonoBehaviour
     {
         //No considero esto la manera mas eficiente, pero como estamos trabajando por escenas no queria hacer
         //una hard reference al UI object
-        ReferenciaUI = GameObject.FindGameObjectWithTag("UI").GetComponent<UiManager>();
+        ReferenciaUI = GameObject.FindGameObjectWithTag("UI").GetComponent<GameManager>();
 
     }
 
@@ -44,7 +44,7 @@ public class FruitManager : MonoBehaviour
         //
         GameObject Explosion = Instantiate(explosionPrefab) as GameObject;
         Explosion.transform.position = transform.position;
-        ReferenciaUI.PerderVida();
+        ReferenciaUI.uiManager.PerderVida();
         Destroy(this.gameObject);
     }
 
@@ -82,7 +82,7 @@ public class FruitManager : MonoBehaviour
         FruitExplosion(100);
     }
 
-    public void OnMouseDown()
+    public void ShotByPlayer()
     {
         switch(FruitID)
         {
@@ -111,7 +111,7 @@ public class FruitManager : MonoBehaviour
     public void OffscreenFruit()
     {
         if(FruitID != 0)//las bombas no quitan vida al salir de la pantalla
-        ReferenciaUI.PerderVida();
+        ReferenciaUI.uiManager.PerderVida();
         Destroy(this.gameObject);
     }
 }
