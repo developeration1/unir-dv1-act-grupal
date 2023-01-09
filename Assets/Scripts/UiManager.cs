@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class UiManager : MonoBehaviour
 {
     public bool vivo = true;
-    public int Score = 0000;
+    [Obsolete] public int score = 0;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] GameObject ScoreObject;
     [SerializeField] GameObject VidasObject;
@@ -20,11 +21,19 @@ public class UiManager : MonoBehaviour
         
     }
 
+
+    [Obsolete]
     public void AddScore(int x)
     {
-        Score += x;
-        scoreText.text = Score.ToString();
+        score += x;
+        scoreText.text = score.ToString();
     }
+
+    public void SetScore(int score)
+    {
+        scoreText.text = score.ToString();
+    }
+
     //Desactiva iconos de vida a medida que los pierda
     public void PerderVida()
     {
@@ -80,6 +89,4 @@ public class UiManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-  
 }

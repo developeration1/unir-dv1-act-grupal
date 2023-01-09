@@ -320,6 +320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1660186194015003958, guid: 81241908302cc814baf5c9b181f31ad7, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1660186194015004361, guid: 81241908302cc814baf5c9b181f31ad7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
